@@ -1,35 +1,28 @@
 import time 
 from os  import system, name
-
-def clear():
-    if name == "nt":
-        _ = system ("cls")
-    else: 
-        _=system ("clear")
-def start(): 
-    clear() 
-    print("Factory: [auto]\nDistributor: []\nShop:[]")
-    time.sleep(2)
-    clear()
-    print("Factory: []\nDistributor: [auto]\nShop:[]")
-    time.sleep(2)
-    clear()
-    print("Factory: []\nDistributor: []\nShop:[auto]")
-    time.sleep(2)
-    clear()
-    print("Factory: []\nDistributor: []\nShop:[]")
-    time.sleep(2)
-    clear()
-    restart2()
-    
-def restart2():
-    restart=input("Restart Y/N:")
-    restart1=restart.upper()
-    if restart1=='N':
-        ()
-    elif restart1=='Y':
-        start()
-    else:
-        print("Incorrect input.")
-        restart2()
-start()
+def carmarker():
+    system("cls")  
+    print("Factory: ",str(factory))
+    print("distruberter: ", str(distruberter))
+    print("shop: ", str(shop))
+    time.sleep(2)  
+factory = ["car","car1"] 
+distruberter = [] 
+shop = []  
+carmarker()
+factory.remove("car1")
+distruberter.insert(0, "car1")
+carmarker()
+distruberter.remove("car1")
+shop.insert(0, "car1")
+carmarker()
+shop.remove("car1")
+carmarker()
+factory.remove("car")
+distruberter.insert(0, "car")
+carmarker()
+distruberter.remove("car")
+shop.insert(0, "car")
+carmarker()
+shop.remove("car")
+carmarker()
